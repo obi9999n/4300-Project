@@ -152,6 +152,24 @@ nav {
   width: 275px;
   height: 250px;
 }
+/* .item-info:hover {
+  background: red;
+}
+*/
+
+.featured-out-of-stock {
+  width: 150%;
+  cursor: pointer;
+}
+
+.featured-out-of-stock:hover {
+  background: red;
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+}
 
 .item-info {
   display: flex;
@@ -160,15 +178,23 @@ nav {
   background-color: rgb(233, 233, 233);
   width: 275px;
   height: 40px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .body0 {
   flex-direction: column;
 }
 
+#topbannertext {
+  font-size: 16;
+}
+
 .featured-top-banner {
   background-color: lightcoral;
-  height: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .item-text {
