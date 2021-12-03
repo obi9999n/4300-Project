@@ -137,29 +137,46 @@ nav {
   margin: 20px;
   padding: 0px 20px;
 }
+.featured-items-container {
+}
+
 .featured-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 25px 25px 25px 25px;
 }
 
 .featured-item {
-  background-color: rgb(167, 167, 167);
   flex-direction: column-reverse;
   width: 275px;
   height: 250px;
-  opacity: 0.6;
 }
 
 .item-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgb(233, 233, 233);
   width: 275px;
   height: 40px;
 }
 
+.body0 {
+  flex-direction: column;
+}
+
+.featured-top-banner {
+  background-color: lightcoral;
+  height: 80px;
+}
+
+.item-text {
+  margin: 5px 5px 0px 5px;
+  padding: 0px;
+}
+.item-image {
+}
 #featureditem1 {
 }
 #featureditem2 {
