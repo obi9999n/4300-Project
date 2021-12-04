@@ -49,6 +49,7 @@ nav {
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   align-items: center;
   padding: 0px 45px;
 }
@@ -58,6 +59,29 @@ nav {
 .menu {
   display: flex;
 }
+.homepage-content-container {
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage-content-navigation {
+  flex-direction: row;
+}
+
+.homepagecontent img {
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+.homepagecontent div {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .menu li {
   position: relative;
   margin: 20px;
@@ -143,19 +167,34 @@ nav {
 .featured-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 25px 25px 25px 25px;
+  margin: 10px 25px 25px 25px;
+  gap: 40px 20px;
+}
+
+.logo-plus-title {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: center;
 }
 
 .featured-item {
   flex-direction: column-reverse;
   width: 275px;
-  height: 250px;
+  height: 291px;
+  margin-top: 15px;
 }
 /* .item-info:hover {
   background: red;
 }
 */
+
+#topbannertitle {
+  font-size: 20pt;
+  color: rgb(0, 0, 0);
+}
 
 .featured-out-of-stock {
   width: 150%;
@@ -169,6 +208,7 @@ nav {
 .button-area {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .item-info {
@@ -197,8 +237,13 @@ nav {
   justify-content: center;
 }
 
+.topbannercontainer {
+  display: flex;
+  justify-content: center;
+}
+
 .item-text {
-  margin: 5px 5px 0px 5px;
+  margin: 6px 5px 0px 5px;
   padding: 0px;
 }
 .item-image {
