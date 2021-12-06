@@ -80,11 +80,53 @@ nav {
 }
 .homepagecontent .homepage-content-container {
   position: absolute;
-  top: 30%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 70px;
 }
 
+.left-home-content {
+  width: 275px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.right-home-content {
+  width: 275px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.left-home-content button {
+  width: 275px;
+}
+
+.right-home-content button {
+  width: 275px;
+}
+
+.left-home-content button:hover {
+  background-color: rgb(128, 158, 240);
+}
+.right-home-content button:hover {
+  background-color: rgb(128, 158, 240);
+}
+
+.right-home-content h5 {
+  text-align: center;
+}
+
+.left-home-content h5 {
+  text-align: center;
+}
 .menu li {
   position: relative;
   margin: 20px;
@@ -218,7 +260,7 @@ nav {
 }
 
 .featured-out-of-stock:hover {
-  background: rgb(136, 29, 29);
+  background: rgb(175, 67, 67);
 }
 
 .button-area {
@@ -247,7 +289,7 @@ nav {
 }
 
 .featured-top-banner {
-  background-color: lightcoral;
+  background-color: rgb(128, 158, 240);
   height: 50px;
   display: flex;
   justify-content: center;
