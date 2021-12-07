@@ -28,17 +28,15 @@ session_start();
             <div class="navigation">
                 <!----logo---->
                 <div class="logo-plus-title">
-                    <a href="home.html" class="logo">
+                    <a href="home.php" class="logo">
                         <img src="images/atllogo2.png" alt="logo image">
                     </a>
                 </div>
                 <!--menu----->
                 <ul class="menu">
                     <li><a href="home.php">Home</a></li>
-                    <li><a href="featured.html">Featured</a>
-                       
-                    </li>
-                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="featured.php">Featured</a></li>
+                    <li><a href="marketplace.php">Marketplace</a></li>
                 </ul>
                 <!--right-menu------>
                 <div class="right-menu">
@@ -47,9 +45,15 @@ session_start();
                         <i class="gg-search"></i>
                     </a>
                     <!---user---->
-                    <a href="login.php">
-                        <i class="gg-user"></i>
-                    </a>
+                    <?php if(isset($_SESSION['user_id'])) { ?>
+                        <a href="logout.php">
+                            <i class="gg-user"></i>
+                        </a>
+                    <?php } else { ?>
+                        <a href="login.php">
+                            <i class="gg-user"></i>
+                        </a>
+                    <?php } ?>
                     <!---cart----->
                     <a href="cart.html">
                         <i class="gg-shopping-cart"></i>

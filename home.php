@@ -29,17 +29,17 @@ session_start();
         <div class="navigation">
             <!----logo---->
             <div class="logo-plus-title">
-                <a href="home.html" class="logo">
+                <a href="home.php" class="logo">
                     <img src="images/atllogo2.png" alt="logo image">
                 </a>
             </div>
             <!--menu----->
             <ul class="menu">
                 <li><a href="home.php">Home</a></li>
-                <li><a href="featured.html">Featured</a>
+                <li><a href="featured.php">Featured</a>
                        
                 </li>
-                <li><a href="#">Marketplace</a></li>
+                <li><a href="marketplace.php">Marketplace</a></li>
             </ul>
             <!--right-menu------>
             <div class="right-menu">
