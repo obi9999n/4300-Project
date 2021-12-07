@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+?>
+
 <!doctype HTML>
 <html lang="english">
 <head> 
@@ -20,17 +28,15 @@
             <div class="navigation">
                 <!----logo---->
                 <div class="logo-plus-title">
-                    <a href="home.html" class="logo">
+                    <a href="home.php" class="logo">
                         <img src="images/atllogo2.png" alt="logo image">
                     </a>
                 </div>
                 <!--menu----->
                 <ul class="menu">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="marketplace.html">Marketplace</a></li>
-                    <li><a href="featured.html">Featured</a>
-                       
-                    </li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="featured.php">Featured</a></li>
+                    <li><a href="marketplace.php">Marketplace</a></li>
                 </ul>
                 <!--right-menu------>
                 <div class="right-menu">
@@ -39,9 +45,15 @@
                         <i class="gg-search"></i>
                     </a>
                     <!---user---->
-                    <a href="#">
-                        <i class="gg-user"></i>
-                    </a>
+                    <?php if(isset($_SESSION['user_id'])) { ?>
+                        <a href="account.php">
+                            <i class="gg-user"></i>
+                        </a>
+                    <?php } else { ?>
+                        <a href="login.php">
+                            <i class="gg-user"></i>
+                        </a>
+                    <?php } ?>
                     <!---cart----->
                     <a href="CheckoutForm.html">
                         <i class="gg-shopping-cart"></i>
