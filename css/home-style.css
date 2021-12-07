@@ -49,6 +49,7 @@ nav {
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   align-items: center;
   padding: 0px 45px;
 }
@@ -57,6 +58,74 @@ nav {
 }
 .menu {
   display: flex;
+}
+.homepage-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.homepage-content-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homepagecontent img {
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+.homepagecontent .homepage-content-container {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 70px;
+}
+
+.left-home-content {
+  width: 275px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.right-home-content {
+  width: 275px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.left-home-content button {
+  width: 275px;
+}
+
+.right-home-content button {
+  width: 275px;
+}
+
+.left-home-content button:hover {
+  background-color: rgb(128, 158, 240);
+}
+.right-home-content button:hover {
+  background-color: rgb(128, 158, 240);
+}
+
+.right-home-content h5 {
+  text-align: center;
+}
+
+.left-home-content h5 {
+  text-align: center;
 }
 .menu li {
   position: relative;
@@ -76,7 +145,7 @@ nav {
 }
 .menu a:hover,
 .right-menu a:hover {
-  color: seagreen;
+  color: rgb(11, 42, 109);
   transition: all ease 0.3s;
 }
 .sale {
@@ -137,29 +206,106 @@ nav {
   margin: 20px;
   padding: 0px 20px;
 }
+.featured-items-container {
+}
+
 .featured-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin: 10px 25px 25px 25px;
+  gap: 40px 20px;
+}
+
+.logo-plus-title {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: center;
+}
+.page-title {
+  align-self: center;
+}
+.page-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .featured-item {
-  background-color: rgb(167, 167, 167);
   flex-direction: column-reverse;
   width: 275px;
-  height: 250px;
-  opacity: 0.6;
+  height: 291px;
+  margin-top: 15px;
+}
+/* .item-info:hover {
+  background: red;
+}
+*/
+
+#topbannertitle {
+  font-size: 20pt;
+  color: rgb(0, 0, 0);
+}
+
+.featured-out-of-stock {
+  width: 150%;
+  cursor: pointer;
+}
+
+.homepage-top-level-content {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.featured-out-of-stock:hover {
+  background: rgb(175, 67, 67);
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .item-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgb(233, 233, 233);
   width: 275px;
   height: 40px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
+.body0 {
+  flex-direction: column;
+}
+
+#topbannertext {
+  font-size: 16;
+}
+
+.featured-top-banner {
+  background-color: rgb(128, 158, 240);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.topbannercontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.item-text {
+  margin: 6px 5px 0px 5px;
+  padding: 0px;
+}
+.item-image {
+}
 #featureditem1 {
 }
 #featureditem2 {
