@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+?>
+
 <!doctype HTML>
 <html lang="english">
 <head> 
@@ -9,10 +17,6 @@
     <link href='https://css.gg/css' rel='stylesheet'>
     <link href='https://unpkg.com/css.gg/icons/all.css' rel='stylesheet'>
     <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
-    <!--lightslider--------->
-    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/lightslider.js"></script>
 </head>
 
 <body>
@@ -31,11 +35,11 @@
             </div>
             <!--menu----->
             <ul class="menu">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="home.php">Home</a></li>
                 <li><a href="featured.html">Featured</a>
                        
                 </li>
+                <li><a href="#">Marketplace</a></li>
             </ul>
             <!--right-menu------>
             <div class="right-menu">
@@ -44,9 +48,15 @@
                     <i class="gg-search"></i>
                 </a>
                 <!---user---->
-                <a href="#">
-                    <i class="gg-user"></i>
-                </a>
+                <?php if(isset($_SESSION['user_id'])) { ?>
+                    <a href="logout.php">
+                        <i class="gg-user"></i>
+                    </a>
+                <?php } else { ?>
+                    <a href="login.php">
+                        <i class="gg-user"></i>
+                     </a>
+                <?php } ?>
                 <!---cart----->
                 <a href="cart.html">
                     <i class="gg-shopping-cart"></i>
@@ -71,13 +81,12 @@
 
     <!--lightslider------->
     <ul id="autoWidth" class="cs-hidden">
-        <li class="photo-1"></li>
+        <li class="item-a"></li>
         <li class="item-b"></li>
         <li class="item-c"></li>
         <li class="item-d"></li>
         <li class="item-e"></li>
-    </ul>
-
+      </ul>
 
     <!--image-slider---------->
     <div class="homepagecontent">
@@ -89,23 +98,11 @@
             </div>
             <div class="right-home-content">
                 <h5>SHOP OUR LATEST STYLES</h5>
-                <a href="marketplace.html"><button>ENTER THE MARKETPLACE</button></a>
+                <a href="#"><button>ENTER THE MARKETPLACE</button></a>
 
             </div>
         </div>
         
-    </div>
-    <div class="subscribe">
-        <h2 class="subscribe__title">SUBSCRIBE TO THE ACB NEWSLETTER</h2>
-        <p class="subscribe__copy">Subscribe to keep up with the latest drops and exciting updates.</p>
-        <div class="form">
-            <input type="email" class="form__email" placeholder="Enter your email address" />
-            <button class="form__button">Send</button>
-        </div>
-        <div class="notice">
-            <input type="checkbox">
-            <span class="notice">I agree to my email address being used to recieve monthly newsletter.</span>
-        </div>
     </div>
     <div class="social-call">
         <!---social-links-------->

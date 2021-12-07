@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+?>
+
 <!doctype HTML>
 <html lang="english">
 <head> 
@@ -26,11 +34,11 @@
                 </div>
                 <!--menu----->
                 <ul class="menu">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="home.php">Home</a></li>
                     <li><a href="featured.html">Featured</a>
                        
                     </li>
+                    <li><a href="#">Marketplace</a></li>
                 </ul>
                 <!--right-menu------>
                 <div class="right-menu">
@@ -39,7 +47,7 @@
                         <i class="gg-search"></i>
                     </a>
                     <!---user---->
-                    <a href="#">
+                    <a href="login.php">
                         <i class="gg-user"></i>
                     </a>
                     <!---cart----->
