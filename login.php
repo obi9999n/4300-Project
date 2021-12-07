@@ -60,6 +60,7 @@ session_start();
 			<input type="checkbox" value="1" name="check"><br><br>
             <input id="button" type="submit" value="Login"><br><br>
             <a href="signup.php">Click to Signup!</a><br><br>
+			<a href="home.php">Go back home!</a><br><br>
         </form>
     </div>
 </body>
