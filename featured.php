@@ -46,7 +46,7 @@ session_start();
                     </a>
                     <!---user---->
                     <?php if(isset($_SESSION['user_id'])) { ?>
-                        <a href="logout.php">
+                        <a href="account.php">
                             <i class="gg-user"></i>
                         </a>
                     <?php } else { ?>
