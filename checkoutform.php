@@ -7,15 +7,105 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="english">
 <head>
+    <title>Checkout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/CheckoutForm.css">
+    <link rel="stylesheet" href="css/checkoutform.css">
+    <link rel="shortcut icon" href="images/atllogo.png">
+    <link rel="stylesheet" href="style/normalize.css">
+    <!-----for icons------>
+    <link href='https://css.gg/css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg/icons/all.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
 </head>
 <body>
+<div class="page-title-container">
+        <h2 class="page-title">ATL CLOTHING BOUTIQUE</h2>
+    </div>
+    <!--navigation---------->
+    <nav>
+    <!---menu-bar------>
+        <div class="navigation">
+            <!----logo---->
+            <div class="logo-plus-title">
+                <a href="home.php" class="logo">
+                    <img src="images/atllogo2.png" alt="logo image">
+                </a>
+            </div>
+            <!--menu----->
+            <ul class="menu">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="featured.php">Featured</a>
+                       
+                </li>
+                <li><a href="marketplace.php">Marketplace</a></li>
+            </ul>
+            <!--right-menu------>
+            <div class="right-menu">
+                <!--search--->
+                <a href="#" class="search">
+                    <i class="gg-search"></i>
+                </a>
+                <!---user---->
+                <?php if(isset($_SESSION['user_id'])) { ?>
+                    <a href="account.php">
+                        <i class="gg-user"></i>
+                    </a>
+                <?php } else { ?>
+                    <a href="login.php">
+                        <i class="gg-user"></i>
+                     </a>
+                <?php } ?>
+                <!---cart----->
+                <a href="checkoutform.php">
+                    <i class="gg-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
 
-<h2>Payment & Shipping Information</h2>
+    <!--search-bar------>
+    <div class="search-bar">
+        <!--search-input-->
+        <div class="search-input">
+            <!--input-->
+            <input type="text" placeholder="Search for Product"/>
+            <!--cancel-button---->
+            <a href="#" class="search-cancel">
+                <i class="gg-close"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!--lightslider------->
+    <ul id="autoWidth" class="cs-hidden">
+        <li class="item-a"></li>
+        <li class="item-b"></li>
+        <li class="item-c"></li>
+        <li class="item-d"></li>
+        <li class="item-e"></li>
+      </ul>
+
+
+    <!--jQuery------>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!---script-------->
+    <script type="text/javascript">
+    $(document).on('click','.search',function(){
+        $('.search-bar').addClass('search-bar-active')
+    });
+
+    $(document).on('click','.search-cancel',function(){
+        $('.search-bar').removeClass('search-bar-active')
+    });
+    </script>
+
+<div class="topbannercontainer">
+            <p id="topbannertitle">PAYMENT & SHIPPING INFORMATION</p>
+</div>
 <div class="row">
   <div class="col-75">
     <div class="container">
@@ -92,6 +182,17 @@ session_start();
     </div>
   </div>
 </div>
-
+<div class="social-call">
+        <!---social-links-------->
+        <div class="social">
+            <a href="https://www.facebook.com/oldnavy/"><i class="gg-facebook"></i></a>
+            <a href="https://www.instagram.com/oldnavy/"><i class="gg-instagram"></i></a>
+            <a href="https://twitter.com/OldNavy?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class ="gg-twitter"></i></a>
+        </div>
+        <!---phone-->
+        <div class="phone">
+            <span> <a href="tel:9999990000">Customer Support<i class="gg-phone"></i></a></span>
+        </div>
+  </div> 
 </body>
 </html>
