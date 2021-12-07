@@ -81,7 +81,7 @@ nav {
 }
 .homepagecontent .homepage-content-container {
   position: absolute;
-  top: 65%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -108,10 +108,12 @@ nav {
 
 .left-home-content button {
   width: 275px;
+  height: 45px;
 }
 
 .right-home-content button {
   width: 275px;
+  height: 45px;
 }
 
 .left-home-content button:hover {
