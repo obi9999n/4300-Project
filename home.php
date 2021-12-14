@@ -4,7 +4,7 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
-?>
+?> 
 
 <!doctype HTML>
 <html lang="english">
