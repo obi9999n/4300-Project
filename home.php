@@ -3,33 +3,9 @@ session_start();
 
 	include("connection.php");
 	include("functions.php");
+ 
+    ?>
 
-    if($_SERVER['REQUEST_METHOD'] == "POST") {
-		    $check = 0;
-        // something was posted 
-        $search_text = $_POST['search-text'];
-            $check = $_POST['check'];
-    
-        if(!empty($search_input)) {
-            // read from database 
-            $query = "select * from products where productName like '%$search_text%'";
-            $result_count = mysqli_num_rows($query);
-
-            // read 
-            $result = mysqli_query($con, $query);
-
-            if($result_count > 0) {
-                while($row = mysqli_fetch_assoc($query)) {
-                    echo $row['productName'];
-                }
-            }
-            else {
-                echo 'There were no results matching this keyword';
-            }
-
-        }
-    }
-?>
 
 <!doctype HTML>
 <html lang="english">
@@ -94,24 +70,16 @@ session_start();
     <div class="search-bar">
         <!--search-input-->
         <div class="search-input">
+            <form action="search.php" method="GET">
             <!--input-->
-            <input id="text" type="text" name="search-text" placeholder="Search for Product"/>
+                <input id="text" type="text" name="s-query" placeholder="Search for Product"/>
+            </form>
             <!--cancel-button---->
             <a href="#" class="search-cancel">
                 <i class="gg-close"></i>
             </a>
         </div>
     </div>
-
-
-    <!--lightslider------->
-    <ul id="autoWidth" class="cs-hidden">
-        <li class="item-a"></li>
-        <li class="item-b"></li>
-        <li class="item-c"></li>
-        <li class="item-d"></li>
-        <li class="item-e"></li>
-      </ul>
 
     <!--image-slider---------->
     <div class="homepagecontent">

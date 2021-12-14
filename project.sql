@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 01, 2021 at 11:48 PM
+-- Generation Time: Dec 14, 2021 at 07:26 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -46,6 +46,18 @@ CREATE TABLE `products` (
   `listPrice` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`productID`, `categoryID`, `productCode`, `productName`, `listPrice`) VALUES
+(1, 1, '1010101010', 'Men\'s Red Rhude T-shirt', '120.00'),
+(2, 2, '1000202222', 'Yeezy 380 Alien', '400.00'),
+(3, 3, '1111100000', 'Men\'s Palm Angels Jacket', '220.00'),
+(4, 2, '1111000001', 'MOMA Air Force 1', '3500.00'),
+(5, 2, '1111211111', 'Off White Foam Runner', '400.00'),
+(6, 2, '7878888888', 'Jordan 11 Retro Cool Grey', '280.00');
+
 -- --------------------------------------------------------
 
 --
@@ -84,7 +96,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
