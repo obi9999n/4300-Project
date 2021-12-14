@@ -4,7 +4,6 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
-<<<<<<< HEAD:home.php
     if($_SERVER['REQUEST_METHOD'] == "POST") {
 		    $check = 0;
         // something was posted 
@@ -30,8 +29,6 @@ session_start();
 
         }
     }
-=======
->>>>>>> ddd61c9bb0e751c138430bc61f3605a3dd860c9f:home.html
 ?>
 
 <!doctype HTML>
