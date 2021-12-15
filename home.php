@@ -69,8 +69,10 @@ session_start();
     <div class="search-bar">
         <!--search-input-->
         <div class="search-input">
+            <form action="search.php" method="GET">
             <!--input-->
-            <input type="text" placeholder="Search for Product"/>
+                <input id="text" name="s_query" placeholder="Search for Product"/>
+            </form>
             <!--cancel-button---->
             <a href="#" class="search-cancel">
                 <i class="gg-close"></i>
@@ -102,8 +104,21 @@ session_start();
 
             </div>
         </div>
-        
     </div>
+
+    <div class="subscribe">
+        <h2 class="subscribe__title">SUBSCRIBE TO THE ACB NEWSLETTER</h2>
+        <p class="subscribe__copy">Subscribe to keep up with the latest drops and exciting updates.</p>
+        <div class="form">
+            <input type="email" class="form__email" placeholder="Enter your email address" />
+            <button class="form__button">Send</button>
+        </div>
+        <div class="notice">
+            <input type="checkbox">
+            <span class="notice">I agree to my email address being used to recieve monthly newsletter.</span>
+        </div>
+    </div>
+
     <div class="social-call">
         <!---social-links-------->
         <div class="social">

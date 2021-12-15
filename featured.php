@@ -69,8 +69,10 @@ session_start();
         <div class="search-bar">
             <!--search-input-->
             <div class="search-input">
+                <form action="search.php" method="GET">
                 <!--input-->
-                <input type="text" placeholder="Search for Product"/>
+                    <input id="text" name="s_query" placeholder="Search for Product"/>
+                 </form>
                 <!--cancel-button---->
                 <a href="#" class="search-cancel">
                     <i class="gg-close"></i>
@@ -94,10 +96,10 @@ session_start();
                     <div>
                         <div class="item-info">
                             <div>
-                                <p class="item=text"><s><?php echo $product['productName']; ?></s></p>
+                                <p class="item=text"><s><?php echo $product['productName'];?></s></p>
                             </div>
                             <div>
-                                <p class="item=text"><s>$<?php echo $product['listPrice']; ?></s></p>
+                                <p class="item=text"><s>$<?php echo $product['listPrice'];?></s></p>
                             </div>
                         </div>
                     </div>
@@ -114,114 +116,6 @@ session_start();
                     </div>
                 </div>
                 <?php endforeach; ?> 
-                <!--- <div class="featured-item" id="featureditem1">
-                    <div>
-                        <div class="item-info">
-                            <div>
-                                <p class="item-text"><s>Mens Red Rhude T-shirt</s></p>
-                            </div>
-                            <div>
-                                <p class="item-text"><s>$120</s></p>
-                            </div>
-                        </div>        
-                    </div>
-                    <div>
-                        <img src="images/rhude2.png" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <button class="featured-out-of-stock">OUT OF STOCK</button>
-                    </div>
-                </div>
-                <div class="featured-item" id="featureditem2">
-                    <div>
-                        <div class="item-info">
-                            <div>
-                                <p class="item-text"><s>Yeezy 380 Alien 10M</s></p>
-                            </div>
-                            <div>
-                                <p class="item-text"><s>$400</s></p>
-                            </div>
-                        </div>        
-                    </div>
-                    <div>
-                        <img src="images/yeezy380.png" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <button class="featured-out-of-stock">OUT OF STOCK</button>
-                    </div>
-                </div>
-                <div class="featured-item" id="featureditem3">
-                    <div>
-                        <div class="item-info">
-                            <div>
-                                <p class="item-text"><s>Mens Palm Angels Jacket</s></p>
-                            </div>
-                            <div>
-                                <p class="item-text"><s>$220</s></p>
-                            </div>
-                        </div>        
-                    </div>
-                    <div>
-                        <img src="images/palmangels3.png" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <button class="featured-out-of-stock">OUT OF STOCK</button>
-                    </div>
-                </div>
-                <div class="featured-item" id="featureditem4">
-                    <div>
-                        <div class="item-info">
-                            <div>
-                                <p class="item-text"><s>MOMA AF1</s></p>
-                            </div>
-                            <div>
-                                <p class="item-text"><s>$3500</s></p>
-                            </div>
-                        </div>        
-                    </div>
-                    <div>
-                        <img src="images/momaaf1.png" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <button class="featured-out-of-stock">OUT OF STOCK</button>
-                    </div>
-                </div>
-                <div class="featured-item" id="featureditem5">
-                    <div>
-                        <div>
-                            <div class="item-info">
-                                <div>
-                                    <p class="item-text"><s>OW Foam Runner 7.5M</s></p>
-                                </div>
-                                <div>
-                                    <p class="item-text"><s>$400</s></p>
-                                </div>
-                            </div>        
-                        </div>
-                        <div>
-                            <img src="images/owshoe.png" alt="red rhude T-shirt"
-                                width="275px"
-                                height="210px"
-                            >
-                        </div>
-                        <div class="button-area">
-                            <button class="featured-out-of-stock">OUT OF STOCK</button>
-                        </div>
-                    </div>
-                </div> --->
-                
             </div>
         </div>
     </div>
@@ -237,4 +131,17 @@ session_start();
             <span> <a href="tel:9999990000">Customer Support<i class="gg-phone"></i></a></span>
         </div>
     </div>
+
+    <!--jQuery------>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!---script-------->
+    <script type="text/javascript">
+    $(document).on('click','.search',function(){
+        $('.search-bar').addClass('search-bar-active')
+    });
+
+    $(document).on('click','.search-cancel',function(){
+        $('.search-bar').removeClass('search-bar-active')
+    });
+    </script>
 </body>

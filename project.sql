@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2021 at 08:11 PM
+-- Generation Time: Dec 15, 2021 at 01:41 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -65,7 +65,11 @@ INSERT INTO `products` (`productID`, `categoryID`, `productCode`, `productName`,
 (2, 1, 'shoes', 'Yeezy 380 Alien 10M', '400.00', 0, 'images/yeezy380.png'),
 (3, 1, 'jacket', 'Mens Palm Angels Jacket', '220.00', 0, 'images/palmangels3.png'),
 (4, 1, 'shoes', 'MOMA AF1', '3500.00', 0, 'images/momaaf1.png'),
-(5, 1, 'shoes', 'OW Foam Runner 7.5M', '400.00', 0, 'images/owshoe.png');
+(5, 1, 'shoes', 'OW Foam Runner 7.5M', '400.00', 0, 'images/owshoe.png'),
+(6, 2, 'shoes', 'AJ1 Royal 9M', '500.00', 1, 'images/jordan1royal.png'),
+(7, 2, 'shoes', 'OW Jordan 1 8M', '2500.00', 1, 'images/offwhitejordan1.png'),
+(8, 2, 'shoes', 'Bapesta YBG 10M', '350.00', 1, 'images/bapesta.png'),
+(9, 2, 'shoes', 'Nike SB DUNK 11M', '400.00', 1, 'images/reddunk.png');
 
 -- --------------------------------------------------------
 
@@ -113,7 +117,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
