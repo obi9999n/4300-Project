@@ -6,10 +6,7 @@ session_start();
  
     ?>
 
-<<<<<<< HEAD
-=======
 ?> 
->>>>>>> 1174da62208fa760fbff7151514ca3d263b261fe
 
 <!doctype HTML>
 <html lang="english">
@@ -75,11 +72,7 @@ session_start();
         <div class="search-input">
             <form action="search.php" method="GET">
             <!--input-->
-<<<<<<< HEAD
                 <input id="text" type="text" name="s-query" placeholder="Search for Product"/>
-=======
-                <input id="text" name="s_query" placeholder="Search for Product"/>
->>>>>>> 1174da62208fa760fbff7151514ca3d263b261fe
             </form>
             <!--cancel-button---->
             <a href="#" class="search-cancel">
