@@ -58,7 +58,7 @@ session_start();
                         </a>
                     <?php } ?>
                     <!---cart----->
-                    <a href="cart.html">
+                    <a href="checkoutform.php">
                         <i class="gg-shopping-cart"></i>
                     </a>
                 </div>

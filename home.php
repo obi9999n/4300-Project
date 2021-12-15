@@ -58,7 +58,7 @@ session_start();
                      </a>
                 <?php } ?>
                 <!---cart----->
-                <a href="cart.html">
+                <a href="checkoutform.php">
                     <i class="gg-shopping-cart"></i>
                 </a>
             </div>
@@ -96,11 +96,11 @@ session_start();
         <div class="homepage-content-container">
             <div class="left-home-content">
                 <h5>DECEMBER FEATURED DROP NOW LIVE</h5>
-                <a href="featured.html"><button>SHOP THE DROP</button></a>
+                <a href="featured.php"><button>SHOP THE DROP</button></a>
             </div>
             <div class="right-home-content">
                 <h5>SHOP OUR LATEST STYLES</h5>
-                <a href="#"><button>ENTER THE MARKETPLACE</button></a>
+                <a href="marketplace.php"><button>ENTER THE MARKETPLACE</button></a>
 
             </div>
         </div>
