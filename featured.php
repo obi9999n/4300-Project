@@ -4,6 +4,9 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
+    $queryProducts = 'SELECT * FROM products WHERE categoryID = 1 ORDER BY productID';
+    $products = mysqli_query($con, $queryProducts);
+
 ?>
 
 <!doctype HTML>
@@ -86,114 +89,31 @@ session_start();
         </div>
         <div class="featured-items-container">
             <div class="featured-container">
-                <div class="featured-item" id="featureditem1">
+                <?php foreach ($products as $product) : ?>
+                <div class="featured-item">
                     <div>
                         <div class="item-info">
                             <div>
-                                <p class="item-text"><s>Mens Red Rhude T-shirt</s></p>
+                                <p class="item=text"><s><?php echo $product['productName'];?></s></p>
                             </div>
                             <div>
-                                <p class="item-text"><s>$120</s></p>
+                                <p class="item=text"><s>$<?php echo $product['listPrice'];?></s></p>
                             </div>
-                        </div>        
-                    </div>
-                    <div>
-                        <img src="images/rhude2.png" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <button class="featured-out-of-stock">OUT OF STOCK</button>
-                    </div>
-                </div>
-                <div class="featured-item" id="featureditem2">
-                    <div>
-                        <div class="item-info">
-                            <div>
-                                <p class="item-text"><s>Yeezy 380 Alien 10M</s></p>
-                            </div>
-                            <div>
-                                <p class="item-text"><s>$400</s></p>
-                            </div>
-                        </div>        
-                    </div>
-                    <div>
-                        <img src="images/yeezy380.png" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <button class="featured-out-of-stock">OUT OF STOCK</button>
-                    </div>
-                </div>
-                <div class="featured-item" id="featureditem3">
-                    <div>
-                        <div class="item-info">
-                            <div>
-                                <p class="item-text"><s>Mens Palm Angels Jacket</s></p>
-                            </div>
-                            <div>
-                                <p class="item-text"><s>$220</s></p>
-                            </div>
-                        </div>        
-                    </div>
-                    <div>
-                        <img src="images/palmangels3.png" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <button class="featured-out-of-stock">OUT OF STOCK</button>
-                    </div>
-                </div>
-                <div class="featured-item" id="featureditem4">
-                    <div>
-                        <div class="item-info">
-                            <div>
-                                <p class="item-text"><s>MOMA AF1</s></p>
-                            </div>
-                            <div>
-                                <p class="item-text"><s>$3500</s></p>
-                            </div>
-                        </div>        
-                    </div>
-                    <div>
-                        <img src="images/momaaf1.png" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <button class="featured-out-of-stock">OUT OF STOCK</button>
-                    </div>
-                </div>
-                <div class="featured-item" id="featureditem5">
-                    <div>
-                        <div>
-                            <div class="item-info">
-                                <div>
-                                    <p class="item-text"><s>OW Foam Runner 7.5M</s></p>
-                                </div>
-                                <div>
-                                    <p class="item-text"><s>$400</s></p>
-                                </div>
-                            </div>        
                         </div>
-                        <div>
-                            <img src="images/owshoe.png" alt="red rhude T-shirt"
-                                width="275px"
-                                height="210px"
-                            >
-                        </div>
-                        <div class="button-area">
+                    </div>
+                    <div>
+                        <img src="<?php echo $product['imagePath']; ?>" alt="red rhude T-shirt"
+                            width="275px"
+                            height="210px"
+                        >
+                    </div>
+                    <div class="button-area">
+                        <?php if ($product['stock'] == 0) { ?>
                             <button class="featured-out-of-stock">OUT OF STOCK</button>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
-                
+                <?php endforeach; ?> 
             </div>
         </div>
     </div>

@@ -39,11 +39,12 @@ session_start();
 <!doctype HTML>
 <html lang="english">
     <head>
+        <link rel="stylesheet" href="css/home-style.css">
         <h1>Account Settings</h1>
     </head>
 
     <body>
-        <p>Username: <?php echo $user_data['user_name']; ?> <br><br>
+        <p>Welcome <?php echo $user_data['user_name']; ?>!<br><br>
         <a href="logout.php">Click here to logout!</a><br>
         <div id="box">
             <form method="post">
