@@ -69,8 +69,10 @@ session_start();
     <div class="search-bar">
         <!--search-input-->
         <div class="search-input">
+            <form action="search.php" method="GET">
             <!--input-->
-            <input type="text" placeholder="Search for Product"/>
+                <input id="text" name="s_query" placeholder="Search for Product"/>
+            </form>
             <!--cancel-button---->
             <a href="#" class="search-cancel">
                 <i class="gg-close"></i>
