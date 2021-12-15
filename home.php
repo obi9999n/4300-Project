@@ -12,7 +12,6 @@ session_start();
 <head> 
     <title>Clothes</title>
     <link rel="shortcut icon" href="images/atllogo.png">
-    <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="css/home-style.css">
     <!-----for icons------>
     <link href='https://css.gg/css' rel='stylesheet'>
