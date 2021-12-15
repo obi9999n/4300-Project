@@ -69,8 +69,10 @@ session_start();
         <div class="search-bar">
             <!--search-input-->
             <div class="search-input">
+                <form action="search.php" method="GET">
                 <!--input-->
-                <input type="text" placeholder="Search for Product"/>
+                    <input id="text" name="s_query" placeholder="Search for Product"/>
+                 </form>
                 <!--cancel-button---->
                 <a href="#" class="search-cancel">
                     <i class="gg-close"></i>
@@ -129,4 +131,17 @@ session_start();
             <span> <a href="tel:9999990000">Customer Support<i class="gg-phone"></i></a></span>
         </div>
     </div>
+
+    <!--jQuery------>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!---script-------->
+    <script type="text/javascript">
+    $(document).on('click','.search',function(){
+        $('.search-bar').addClass('search-bar-active')
+    });
+
+    $(document).on('click','.search-cancel',function(){
+        $('.search-bar').removeClass('search-bar-active')
+    });
+    </script>
 </body>
