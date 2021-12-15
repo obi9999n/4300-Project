@@ -58,13 +58,13 @@ session_start();
                         height="210px"
                     >
                 </div>
-                <div class="button-area">
+                <!---<div class="button-area">
                     <?php if ($product['stock'] == 0) { ?>
                         <button class="featured-out-of-stock">OUT OF STOCK</button>
                     <?php } else { ?>
                         <button class="featured-out-of-stock">ADD TO CART</button>
                     <?php } ?>
-                </div>
+                </div> --->
             </div>
             <?php endforeach; ?> 
         </div>
