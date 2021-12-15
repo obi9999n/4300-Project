@@ -19,17 +19,11 @@ session_start();
     <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
 </head>
 <body>
-    <?php echo $_GET['s_query']; ?>
     <?php if (isset($_GET['s_query'])) {
         $s_query = $_GET['s_query'];
         $query = "SELECT DISTINCT * FROM products WHERE UPPER(productName) LIKE UPPER('%$s_query%')";
         $products = mysqli_query($con, $query);
         $result_count = mysqli_num_rows($products);
-        if($result_count >= 1) {
-            echo "here1";
-        } else {
-            echo "here";
-        }
     ?>
     <div class="re-search-bar">
         <!--search-input-->
