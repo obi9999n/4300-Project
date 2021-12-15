@@ -96,10 +96,10 @@ session_start();
                     <div>
                         <div class="item-info">
                             <div>
-                                <p class="item=text"><s><?php echo $product['productName']; ?></s></p>
+                                <p class="item=text"><?php echo $product['productName']; ?></p>
                             </div>
                             <div>
-                                <p class="item=text"><s>$<?php echo $product['listPrice']; ?></s></p>
+                                <p class="item=text">$<?php echo $product['listPrice']; ?></p>
                             </div>
                         </div>
                     </div>
