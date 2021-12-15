@@ -4,7 +4,9 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
-  $queryProducts = 'SELECT * FROM products WHERE inCart = 1 ORDER BY productID';
+  $user_data = check_login($con);
+
+  $queryProducts = 'select * from products, cart where products.productID = cart.productID ORDER BY products.productID';
   $products = mysqli_query($con, $queryProducts);
   $result_count = mysqli_num_rows($products);
   $sum = 0;
@@ -179,7 +181,7 @@ session_start();
     <div class="container">
       <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b><?php echo $result_count; ?></b></span></h4>
       <?php foreach ($products as $product) : ?>
-        <p><a href="#"><?php echo $product['productName']; ?></a> <span class="price">$<?php echo $product['listPrice']; ?></span></p>
+        <p><a href="marketplace.php"><?php echo $product['productName']; ?></a> <span class="price">$<?php echo $product['listPrice']; ?></span></p>
         <?php $sum+=$product['listPrice']; ?>
       <?php endforeach; ?>
       <hr>

@@ -39,13 +39,12 @@ session_start();
 <!doctype HTML>
 <html lang="english">
     <head>
-        <link rel="stylesheet" href="css/home-style.css">
-        <h1>Account Settings</h1>
+        <link rel="stylesheet" href="css/account.css">
+        <center><h1>Account Settings</h1></center>
     </head>
 
     <body>
-        <p>Welcome <?php echo $user_data['user_name']; ?>!<br><br>
-        <a href="logout.php">Click here to logout!</a><br>
+        <center><p>Welcome <?php echo $user_data['user_name']; ?>!<br></center>
         <div id="box">
             <form method="post">
                 <p>Change username:</p>
@@ -63,6 +62,7 @@ session_start();
                     <p>Error: Field is empty. Please try again<p>
                 <?php } ?> 
                 <a href="home.php">Back to home!</a><br><br>
+                <a href="logout.php">Click here to logout!</a><br>
             </form>
         </div>       
     </body>
