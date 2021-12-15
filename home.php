@@ -4,6 +4,10 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
+    if (isset($_POST['add'])) {
+        print_r($_POST['product_id']);
+        header("Location: home.php");
+    }
 ?> 
 
 <!doctype HTML>

@@ -6,6 +6,11 @@ session_start();
 
     $queryProducts = 'SELECT * FROM products WHERE categoryID = 2 ORDER BY productID';
     $products = mysqli_query($con, $queryProducts);
+
+    if (isset($_POST['add'])) {
+        print_r($_POST['product_id']);
+        header("Location: home.php");
+    }
     
 ?>
 
@@ -113,8 +118,10 @@ session_start();
                         <?php if ($product['stock'] == 0) { ?>
                             <button class="featured-out-of-stock">OUT OF STOCK</button>
                         <?php } else { ?>
-                            <button class="featured-out-of-stock">ADD TO CART</button>
+                            <button class="featured-out-of-stock" name="add">ADD TO CART</button>
+                            <input type="hidden" name='product_id' value=<?php echo $product['productID'] ?>>
                         <?php } ?>
+                        <input type="hidden" name='product_id' value=<?php $product['productID'] ?>>
                     </div>
                 </div>
                 <?php endforeach; ?>
