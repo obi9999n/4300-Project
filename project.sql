@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2021 at 01:41 AM
+-- Generation Time: Dec 15, 2021 at 04:20 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `project`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `productID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`productID`) VALUES
+(6),
+(8);
 
 -- --------------------------------------------------------
 
@@ -53,23 +71,24 @@ CREATE TABLE `products` (
   `productName` varchar(255) DEFAULT NULL,
   `listPrice` decimal(10,2) DEFAULT NULL,
   `stock` int(11) NOT NULL,
-  `imagePath` varchar(100) NOT NULL
+  `imagePath` varchar(100) NOT NULL,
+  `inCart` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`productID`, `categoryID`, `productCode`, `productName`, `listPrice`, `stock`, `imagePath`) VALUES
-(1, 1, 'shirt', 'Mens Red Rhude T-shirt', '120.00', 0, 'images/rhude2.png'),
-(2, 1, 'shoes', 'Yeezy 380 Alien 10M', '400.00', 0, 'images/yeezy380.png'),
-(3, 1, 'jacket', 'Mens Palm Angels Jacket', '220.00', 0, 'images/palmangels3.png'),
-(4, 1, 'shoes', 'MOMA AF1', '3500.00', 0, 'images/momaaf1.png'),
-(5, 1, 'shoes', 'OW Foam Runner 7.5M', '400.00', 0, 'images/owshoe.png'),
-(6, 2, 'shoes', 'AJ1 Royal 9M', '500.00', 1, 'images/jordan1royal.png'),
-(7, 2, 'shoes', 'OW Jordan 1 8M', '2500.00', 1, 'images/offwhitejordan1.png'),
-(8, 2, 'shoes', 'Bapesta YBG 10M', '350.00', 1, 'images/bapesta.png'),
-(9, 2, 'shoes', 'Nike SB DUNK 11M', '400.00', 1, 'images/reddunk.png');
+INSERT INTO `products` (`productID`, `categoryID`, `productCode`, `productName`, `listPrice`, `stock`, `imagePath`, `inCart`) VALUES
+(1, 1, 'shirt', 'Mens Red Rhude T-shirt', '120.00', 0, 'images/rhude2.png', 0),
+(2, 1, 'shoes', 'Yeezy 380 Alien 10M', '400.00', 0, 'images/yeezy380.png', 0),
+(3, 1, 'jacket', 'Mens Palm Angels Jacket', '220.00', 0, 'images/palmangels3.png', 0),
+(4, 1, 'shoes', 'MOMA AF1', '3500.00', 0, 'images/momaaf1.png', 0),
+(5, 1, 'shoes', 'OW Foam Runner 7.5M', '400.00', 0, 'images/owshoe.png', 0),
+(6, 2, 'shoes', 'AJ1 Royal 9M', '500.00', 0, 'images/jordan1royal.png', 1),
+(7, 2, 'shoes', 'OW Jordan 1 8M', '2500.00', 1, 'images/offwhitejordan1.png', 0),
+(8, 2, 'shoes', 'Bapesta YBG 10M', '350.00', 0, 'images/bapesta.png', 1),
+(9, 2, 'shoes', 'Nike SB DUNK 11M', '400.00', 1, 'images/reddunk.png', 0);
 
 -- --------------------------------------------------------
 

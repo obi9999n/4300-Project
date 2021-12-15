@@ -39,34 +39,36 @@ session_start();
         </div>
     </div>
     <div class="featured-items-container">
-            <div class="featured-container">
-                <?php foreach ($products as $product) : ?>
-                <div class="featured-item">
-                    <div>
-                        <div class="item-info">
-                            <div>
-                                <p class="item=text"><s><?php echo $product['productName'];?></s></p>
-                            </div>
-                            <div>
-                                <p class="item=text"><s>$<?php echo $product['listPrice'];?></s></p>
-                            </div>
+        <div class="featured-container-2">
+            <?php foreach ($products as $product) : ?>
+            <div class="featured-item">
+                <div>
+                    <div class="item-info">
+                        <div>
+                            <p class="item=text"><s><?php echo $product['productName'];?></s></p>
+                        </div>
+                        <div>
+                            <p class="item=text"><s>$<?php echo $product['listPrice'];?></s></p>
                         </div>
                     </div>
-                    <div>
-                        <img src="<?php echo $product['imagePath']; ?>" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
-                        >
-                    </div>
-                    <div class="button-area">
-                        <?php if ($product['stock'] == 0) { ?>
-                            <button class="featured-out-of-stock">OUT OF STOCK</button>
-                        <?php } ?>
-                    </div>
                 </div>
-                <?php endforeach; ?> 
+                <div>
+                    <img src="<?php echo $product['imagePath']; ?>" alt="red rhude T-shirt"
+                        width="275px"
+                        height="210px"
+                    >
+                </div>
+                <div class="button-area">
+                    <?php if ($product['stock'] == 0) { ?>
+                        <button class="featured-out-of-stock">OUT OF STOCK</button>
+                    <?php } else { ?>
+                        <button class="featured-out-of-stock">ADD TO CART</button>
+                    <?php } ?>
+                </div>
             </div>
+            <?php endforeach; ?> 
         </div>
+    </div>
     <?php }?>
     
 </body>

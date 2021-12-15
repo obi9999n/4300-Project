@@ -110,10 +110,14 @@ session_start();
                         >
                     </div>
                     <div class="button-area">
-                        <?php if ($product['stock'] == 0) { ?>
-                            <button class="featured-out-of-stock">OUT OF STOCK</button>
-                        <?php } else { ?>
-                            <button class="featured-out-of-stock">ADD TO CART</button>
+                        <?php if ($product['stock'] >= 1) { ?>
+                            <button class="featured-out-of-stock"><a href="addToCart.php?productID=<?php echo $product['productID']; ?>">ADD TO CART</a></button>
+                        <?php } else { 
+                                if ($product['inCart'] == 1) { ?>
+                                    <button class="featured-out-of-stock"><a href="removeFromCart.php?productID=<?php echo $product['productID']; ?>">REMOVE FROM CART</a></button>
+                                <?php } else { ?>
+                                    <button class="featured-out-of-stock">OUT OF STOCK</button>
+                                <?php } ?>
                         <?php } ?>
                     </div>
                 </div>

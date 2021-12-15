@@ -2,7 +2,7 @@
     width: 100%;
     height: 200px;
     background-color: white;
-    position: fixed;
+    /*position: fixed; */
     left: 0px;
     top: 0px; 
     display: flex;
@@ -28,6 +28,40 @@
     margin: 20px;
     padding: 0px 20px;
   }
-.search-results {
-    bottom: 0px;
+
+.featured-items-container-2 {
+
+}
+
+.featured-container-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 25px 25px 25px;
+  gap: 40px 20px;
+}
+
+.featured-item {
+  flex-direction: column-reverse;
+  width: 275px;
+  height: 291px;
+  margin-top: 15px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(233, 233, 233);
+  width: 275px;
+  height: 40px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
