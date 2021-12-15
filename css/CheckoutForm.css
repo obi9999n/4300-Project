@@ -207,8 +207,6 @@ nav {
   margin: 20px;
   padding: 0px 20px;
 }
-.featured-items-container {
-}
 
 .featured-container {
   display: flex;
@@ -304,14 +302,6 @@ nav {
 .item-text {
   margin: 6px 5px 0px 5px;
   padding: 0px;
-}
-.item-image {
-}
-#featureditem1 {
-}
-#featureditem2 {
-}
-#featureditem3 {
 }
 
 .search-cancel {

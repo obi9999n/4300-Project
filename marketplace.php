@@ -4,6 +4,8 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
+    $queryProducts = 'SELECT * FROM products WHERE categoryID = 2 ORDER BY productID';
+    $products = mysqli_query($con, $queryProducts);
 ?>
 
 <!doctype HTML>
@@ -85,6 +87,33 @@ session_start();
             <p id="topbannertitle">MARKETPLACE</p>
         </div>
         <div class="featured-items-container">
+            <div class="featured-container">
+                <?php foreach ($products as $product) : ?>
+                <div class="featured-item">
+                    <div>
+                        <div class="item-info">
+                            <div>
+                                <p class="item=text"><s><?php echo $product['productName']; ?></s></p>
+                            </div>
+                            <div>
+                                <p class="item=text"><s>$<?php echo $product['listPrice']; ?></s></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="<?php echo $product['imagePath']; ?>" alt="red rhude T-shirt"
+                            width="275px"
+                            height="210px"
+                        >
+                    </div>
+                    <div class="button-area">
+                        <?php if ($product['stock'] == 0) { ?>
+                            <button class="featured-out-of-stock">OUT OF STOCK</button>
+                        <?php } ?>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+       <!---  <div class="featured-items-container">
             <div class="featured-container">
                 <div class="featured-item" id="featureditem1">
                     <div>
@@ -316,7 +345,7 @@ session_start();
                     <div class="button-area">
                         <button class="featured-out-of-stock">VIEW</button>
                     </div>
-                </div>
+                </div> --->
                 
                 
             </div>
