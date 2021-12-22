@@ -60,7 +60,7 @@ session_start();
 </head>
 <body>
 <div class="page-title-container">
-        <h2 class="page-title">ATL CLOTHING BOUTIQUE</h2>
+        <h2 class="page-title">ATL SHOE BOUTIQUE</h2>
     </div>
     <!--navigation---------->
     <nav>
@@ -120,11 +120,11 @@ session_start();
     </div>
 
 	<div class="homepagecontent">
-        <img src="images/pexels-richard-solano-5796567.jpg" alt="">
+        <img src="images/hypebrands.jpeg" alt="" style="width: 100%">
         <div class="homepage-content-container">
 		<div id="box">
         <form method="post">
-            <div style="font-size: 20px; margin: 10px; color: white">Login</div>
+            <div style="font-size: 20px; margin: 10px; color: black">Login</div>
 			<?php if ($validInfoNeeded == 1) { ?>
 				<?php $validInfoNeeded = 0; ?>
 				<p>Please enter some valid information.</p>

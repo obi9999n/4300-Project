@@ -1,16 +1,17 @@
 <?php
-session_start();
+  session_start();
 
 	include("connection.php");
 	include("functions.php");
 
   $user_data = check_login($con);
 
-  $queryProducts = 'select * from products, cart where products.productID = cart.productID ORDER BY products.productID';
+  $queryProducts = 'SELECT * FROM products, cart WHERE products.productID = cart.productID ORDER BY products.productID';
   $products = mysqli_query($con, $queryProducts);
   $result_count = mysqli_num_rows($products);
   $sum = 0;
 
+  
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@ session_start();
 </head>
 <body>
 <div class="page-title-container">
-        <h2 class="page-title">ATL CLOTHING BOUTIQUE</h2>
+        <h2 class="page-title">ATL SHOE BOUTIQUE</h2>
     </div>
     <!--navigation---------->
     <nav>

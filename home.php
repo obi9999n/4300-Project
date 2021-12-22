@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+    
 	include("connection.php");
 	include("functions.php");
 
@@ -21,7 +21,7 @@ session_start();
 
 <body>
     <div class="page-title-container">
-        <h2 class="page-title">ATL CLOTHING BOUTIQUE</h2>
+        <h2 class="page-title">ATL SHOE BOUTIQUE</h2>
     </div>
     <!--navigation---------->
     <nav>
@@ -96,18 +96,18 @@ session_start();
         <div class="homepage-content-container">
             <div class="left-home-content">
                 <h5>DECEMBER FEATURED DROP NOW LIVE</h5>
-                <a href="featured.php"><button>SHOP THE DROP</button></a>
+                <a href="featured.php"><button class="home-buttons" >SHOP THE DROP</button></a>
             </div>
             <div class="right-home-content">
                 <h5>SHOP OUR LATEST STYLES</h5>
-                <a href="marketplace.php"><button>ENTER THE MARKETPLACE</button></a>
+                <a href="marketplace.php"><button class="home-buttons" >ENTER THE MARKETPLACE</button></a>
 
             </div>
         </div>
     </div>
 
     <div class="subscribe">
-        <h2 class="subscribe__title">SUBSCRIBE TO THE ACB NEWSLETTER</h2>
+        <h2 class="subscribe__title">SUBSCRIBE TO THE ASB NEWSLETTER</h2>
         <p class="subscribe__copy">Subscribe to keep up with the latest drops and exciting updates.</p>
         <div class="form">
             <input type="email" class="form__email" placeholder="Enter your email address" />

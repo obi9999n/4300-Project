@@ -24,7 +24,7 @@ session_start();
 <body>
     <div>
         <div class="page-title-container">
-            <h2 class="page-title">ATL CLOTHING BOUTIQUE</h2>
+            <h2 class="page-title">ATL SHOE BOUTIQUE</h2>
         </div>
         <nav>
         <!---menu-bar------>
@@ -105,8 +105,8 @@ session_start();
                     </div>
                     <div>
                         <img src="<?php echo $product['imagePath']; ?>" alt="red rhude T-shirt"
-                            width="275px"
-                            height="210px"
+                            width="360px"
+                            height="197px"
                         >
                     </div>
                     <div class="button-area">
